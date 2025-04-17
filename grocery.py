@@ -2,7 +2,7 @@ lit=[]
 lit1=[]
 while True:
     try:
-        e=input().lower()
+        e=input().upper()
     except EOFError:
         break
     if e in lit :
@@ -11,11 +11,7 @@ while True:
     else:
         lit+=[e]
         lit1+=[1]
-lit.sort()
-for i in range(len(lit)):
-    print(lit1[i],lit[i])
-
-
-
-
-
+m_lit=list(zip(lit,lit1))
+m_lit.sort()
+for el,c in m_lit:
+    print(f"{c} {el}")
